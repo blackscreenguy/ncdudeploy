@@ -1,0 +1,8 @@
+---
+  - name: testing connectivity
+    hosts: db1
+    become_user: admum
+    become_method: runas
+    tasks:
+        - name: package install for servers
+          yum:  name=ncdu state=latest
