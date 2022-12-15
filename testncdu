@@ -1,8 +1,0 @@
----
-  - name: testing connectivity
-    hosts: app1
-    become: yes
-    
-    tasks:
-        - name: package install for servers
-          yum:  name=ncdu state=latest
