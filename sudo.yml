@@ -1,0 +1,24 @@
+ name: Give sudo rights to user
+  hosts: db
+  become_user: suresh.t
+  become: root
+  user: "{{ user }}"
+  tags:
+  - sudo
+
+tasks:
+
+- name: Allow {{ user }} to sudo
+  lineinfile:
+    dest: /etc/sudoers
+    state: present
+    regexp: '^%{{ user }}'
+    line: '%{{ user }} ALL=(ALL) NOPASSWD:ALL'
+
+- name: Set sudo password for {{ user }}
+  user:
+    name: "{{ user }}"
+    password: "{{ password }}"
+    update_password: on_create
+  tags:
+  - sudo
