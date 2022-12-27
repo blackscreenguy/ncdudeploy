@@ -2,7 +2,6 @@
   - name: connectivity for server
     hosts: db
     become: yes
-    become_user: admum
     tasks:
        - name: install packages on system as domain user
          yum:
