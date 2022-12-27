@@ -1,6 +1,7 @@
 ---
   - name: connectivity for server
     hosts: db
+    become_user: admum
     become: yes
     tasks:
        - name: install packages on system as domain user
