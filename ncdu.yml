@@ -1,7 +1,7 @@
 ---
   - name: testing connectivity
-    hosts: db
-    become_user: admum
+    hosts: infr
+    become_user: suresh.t
     become: yes
     become_method: sudo
     tasks:
