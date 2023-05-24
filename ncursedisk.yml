@@ -1,8 +1,8 @@
 ---
   - name: testing connectivity
     hosts: infr
-    become_user: suresh.t
     become: yes
+    become_user: suresh.t
     tasks:
       - name: package install for servers
         yum:  name=ncdu state=latest
