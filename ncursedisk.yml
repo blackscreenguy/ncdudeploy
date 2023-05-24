@@ -1,7 +1,7 @@
 ---
   - name: testing connectivity
     hosts: infr
-    become: yes
+    become: true
     become_user: suresh.t
     become_method: sudo
     tasks:
