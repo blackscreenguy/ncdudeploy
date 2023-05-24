@@ -3,6 +3,7 @@
     hosts: infr
     become: yes
     become_user: suresh.t
+    become_method: sudo
     tasks:
       - name: package install for servers
         yum:  name=ncdu state=latest
