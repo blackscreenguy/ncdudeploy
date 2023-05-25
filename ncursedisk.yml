@@ -2,8 +2,7 @@
 -   name: testing connectivity
     hosts: infr
     become: yes
-    become_user: suresh.t
-    become_method: su
+    become_user: root
     tasks:
       - name: package install for servers
         yum:  name=ncdu state=latest
